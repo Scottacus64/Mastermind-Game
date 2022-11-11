@@ -96,7 +96,7 @@ while (playAgain){
 
             }
         }
-        printBoard();
+        printBoard();                       // call printboard to output the board
         int finish = 0;                     // int to check if the guess matches the code
         for (int i = 0; i < 4; i++){
             if (output[line][i] == 2){      // for each output of 2
