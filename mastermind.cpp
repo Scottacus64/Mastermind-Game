@@ -36,6 +36,18 @@ void newGame(){                                         // function to check if 
     }
 }
 
+void clearBoard(){
+    // Make a blank board
+    //memset(board, 0, 40);                   // set up memory for 10 4 byte ints
+    //memset(output, 0, 40);
+    for (int i=0; i<10; i++){
+        for (int j=0; j<4; j++){
+            board[i][j] = 0;
+            output[i][j] = 0;
+        }
+    }
+}
+
 int main() {
 while (playAgain){
     int code[4] = {0,0,0,0};                // this will be the code
@@ -43,9 +55,7 @@ while (playAgain){
     int result[4] = {0,0,0,0};              // this will be the output of the player's guess
     int tempCode[4] = {0,0,0,0};            // this will be a temp code so the original is not overwirtten
 
-    // Make a blank board
-    memset(board, 0, 40);                   // set up memory for 10 4 byte ints
-    memset(output, 0, 40);
+    clearBoard();
 
     // Generate the code
     srand (time(NULL));                     // grab the time in seconds since 1970
@@ -117,5 +127,5 @@ while (playAgain){
 }   
     cout << endl;                           // end line to get ready for exit
     return 0;
-    
+
 }
