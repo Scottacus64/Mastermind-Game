@@ -38,14 +38,14 @@ void newGame(){                                         // function to check if 
 
 void clearBoard(){
     // Make a blank board
-    //memset(board, 0, 40);                   // set up memory for 10 4 byte ints
-    //memset(output, 0, 40);
-    for (int i=0; i<10; i++){
+    memset(board, 0, 40);                   // set up memory for 10 4 byte ints
+    memset(output, 0, 40);
+    /*for (int i=0; i<10; i++){
         for (int j=0; j<4; j++){
             board[i][j] = 0;
             output[i][j] = 0;
         }
-    }
+    }*/
 }
 
 int main() {
